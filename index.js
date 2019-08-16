@@ -160,11 +160,7 @@ function _waitForRedirectAsync(returnUrl: string): Promise<RedirectResult> {
 }
 
 async function isAvailable(): Promise<boolean> {
-  if (Platform.OS === 'android') {
-    return Promise.resolve(true);
-  } else {
-    return RNInAppBrowser.isAvailable();
-  }
+  return RNInAppBrowser.isAvailable();
 }
 
 export default {
